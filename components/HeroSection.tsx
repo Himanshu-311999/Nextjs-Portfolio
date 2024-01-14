@@ -5,6 +5,16 @@ import { Link as ScrollLink,  LinkProps  } from "react-scroll"
 import { HiArrowDown } from "react-icons/hi"
 
 const HeroSection = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      window.scrollTo({
+        top: aboutSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+  
   return (
     <section id="home">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
@@ -41,18 +51,9 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">
-        <ScrollLink
-            to="about"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            // offset={-100}
-            // duration={500}
-          >
-            <div>
-              <HiArrowDown size={35} className="animate-bounce" /> 
-            </div>
-          </ScrollLink>
+      <div onClick={scrollToAbout} className="cursor-pointer">
+        <HiArrowDown size={35} className="animate-bounce" />
+      </div>
       </div>
     </section>
   )
