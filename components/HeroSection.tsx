@@ -49,9 +49,9 @@ const HeroSection = () => {
             // offset={-100}
             // duration={500}
           >
-            <React.Fragment>
+            <div>
               <HiArrowDown size={35} className="animate-bounce" /> 
-            </React.Fragment>
+            </div>
           </ScrollLink>
       </div>
     </section>
