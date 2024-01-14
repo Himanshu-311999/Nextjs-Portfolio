@@ -46,8 +46,8 @@ const HeroSection = () => {
           activeClass="active"
           spy={true}
           smooth={true}
-          offset={-100}
-          duration={500}
+          // offset={-100}
+          // duration={500}
         >
           <HiArrowDown size={35} className="animate-bounce" />
         </ScrollLink>
