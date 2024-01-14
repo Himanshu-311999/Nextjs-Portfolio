@@ -3,16 +3,16 @@ import Image from "next/image"
 
 const skills = [
   { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "JavaScript" },
+  { skill: "CSS / SCSS" },
+  { skill: "JavaScript / Es6+" },
   { skill: "TypeScript" },
-  { skill: "Python" },
   { skill: "React" },
   { skill: "Next.js" },
   { skill: "Tailwind CSS" },
+  { skill: "Cypress" },
   { skill: "Git" },
   { skill: "GitHub" },
-  { skill: "Jupyter Notebooks" },
+  { skill: "Visual Studio Code" },
 ]
 
 const AboutSection = () => {
@@ -30,22 +30,22 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              Hi, my name is Hosna and I am a{" "}
+              Hi, my name is Himanshu and I am a{" "}
               <span className="font-bold">{"highly ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
               <span className="font-bold">{" driven"}</span> software engineer
-              based in Los Angeles, CA.
+              based in Pune.
             </p>
             <br />
             <p>
-              I graduated from California State University, Northridge in 2019
-              with a BS in Computer Engineering and have been working in the
+              I graduated from North Maharashtra University in 2020
+              with a BE in IT Engineering and have been working in the
               field ever since.
             </p>
             <br />
             <p>
               I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling, to making YouTube videos,
+              From trekking, traveling, to playing sports.
               I am always seeking new experiences and love to keep myself
               engaged and learning new things.
             </p>
@@ -60,6 +60,16 @@ const AboutSection = () => {
               possible. I am excited to see where my career takes me and am
               always open to new opportunities. 🙂
             </p>
+            <div className="text-center md:text-left mt-8">
+              <h2 className="text-2xl mb-4 font-bold">Download Resume</h2>
+              <a
+                href={`/Himanshu-Resume.pdf`}
+                download={"/Himanshu-Resume.pdf"}
+                className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 inline-block"
+              >
+                Download Now
+              </a>
+            </div>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">My Skills</h1>
@@ -75,13 +85,13 @@ const AboutSection = () => {
                 )
               })}
             </div>
-            <Image
-              src="/hero-image.png"
-              alt=""
+            {/* <Image
+              src="/hero-images.png"
+              alt="About Me image"
               width={325}
               height={325}
               className="hidden md:block md:relative md:bottom-4 md:left-32 md:z-0"
-            />
+            /> */}
           </div>
         </div>
       </div>

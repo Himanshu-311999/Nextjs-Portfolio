@@ -1,32 +1,32 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import SlideUp from "./SlideUp"
+// import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Git Repositories UI - Next JS",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "It is a web app that buit using NextJS-13. It is used to find repositories, add new repositories etc.",
+    image: "/nextjs-gitclone.png",
+    github: "https://github.com/Himanshu-311999/Next-JS-App",
+    link: "https://next-js-app-rust-three.vercel.app/ ",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "CineVerse",
+    description: "CineVerse is a Movie app that was built using the React & Redux-Toolkit.",
+    image: "/React-Redux-Movie-App.png",
+    github: "https://github.com/Himanshu-311999/React-Redux-Toolkit-Movie",
+    link: "https://himanshu-reduxtoolkit-movie-app.netlify.app/",
   },
   {
-    name: "Kator Family Photos",
+    name: "Budget Tracker",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "This is a simple web application bulit using React-16. It is used to track your monthly budget.",
+    image: "/Budget-Tracker.png",
+    github: "https://github.com/Himanshu-311999/Budget-Tracker",
+    link: "https://himanshu-budget-tracker.netlify.app",
   },
 ]
 
@@ -42,10 +42,10 @@ const ProjectsSection = () => {
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
-              <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+              {/* <SlideUp offset="-300px 0px -300px 0px"> */}
+                <div className="flex flex-col md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
-                    <Link href={project.link}>
+                    <Link href={project.link} target="_blank">
                       <Image
                         src={project.image}
                         alt=""
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                 </div>
-              </SlideUp>
+              {/* </SlideUp> */}
             </div>
           )
         })}

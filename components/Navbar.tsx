@@ -1,6 +1,5 @@
 "use client" // this is a client component
-import React from "react"
-import { useState } from "react"
+import React, { useState }  from "react"
 import { Link } from "react-scroll/modules"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
@@ -25,6 +24,10 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Projects",
     page: "projects",
   },
+  {
+    label: "Contact",
+    page: "contact",
+  },
 ]
 
 export default function Navbar() {
@@ -38,8 +41,8 @@ export default function Navbar() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home">
-              <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Hosna Qasmei</h2>
+              <div className="container flex items-center space-x-2 cursor-pointer">
+                <h2 className="text-2xl font-bold">Himanshu Mukhedkar</h2>
               </div>
             </Link>
             <div className="md:hidden">
@@ -55,11 +58,10 @@ export default function Navbar() {
 
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 
+            ${navbar ? "block" : "hidden"}`}
           >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 cursor-pointer">
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <Link
